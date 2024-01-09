@@ -9,3 +9,7 @@ updates:
     commit-message:
       prefix: ":arrow_up:"
     open-pull-requests-limit: 50
+    ignore:
+      - dependency-name: "python"
+        versions:
+          - "<= 3.11"
