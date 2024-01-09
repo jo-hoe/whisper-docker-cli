@@ -1,5 +1,7 @@
 # Whisper Docker CLI
 
+[![Docker Build Status](https://github.com/jo-hoe/whisper-docker-cli/workflows/test/badge.svg)](https://github.com/jo-hoe/whisper-docker-cli/actions?workflow=docker-build-test)
+
 This repository wraps [whisper](https://github.com/openai/whisper) in a docker container.
 
 ## Start via Docker Compose
