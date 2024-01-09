@@ -15,5 +15,5 @@ docker exec -it whisper bash
 whisper /mnt/input/demo.mp3 --output_dir /mnt/output/ -f srt
 ```
 
-The docker compose file will create an read only `input` folder and a writable `output` folder.
-Models are downloaded automatically and stored in the `cache` folder.
+The docker compose file will create an read only `input` directory and a writable `output` directory.
+Models are downloaded automatically and stored in a directory called `cache`.
