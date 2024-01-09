@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  whisper:
+    # build directly from the docker file
+    build: .
+    container_name: whisper
+    volumes:
+      # read only right for input folder
+      - ./input:/mnt/input:ro
+      # rw right for output folder
+      - ./output:/mnt/output
+      # cache folder to store models between executions
+      - ./cache:/root/.cache/whisper/
+    # keep whisper running so one and exec into the container
+    command: /bin/bash
+    tty: true
