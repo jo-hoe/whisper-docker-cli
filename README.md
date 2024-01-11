@@ -4,6 +4,32 @@
 
 This repository wraps [whisper](https://github.com/openai/whisper) in a docker container.
 
+## Stare via Docker
+
+In `bash` or run the following command to start the container to transcribe an audio file (e.g. `demo.mp3`) in the input folder.
+
+```bash
+docker run --rm -it \
+  -v $(pwd)/input:/mnt/input:ro \
+  -v $(pwd)/output:/mnt/output \
+  -v $(pwd)/cache:/root/.cache/whisper/ \
+  ghcr.io/jo-hoe/whisper-docker-cli:latest \
+  whisper /mnt/input/demo.mp3 --output_dir /mnt/output/ -f srt
+```
+
+In `PowerShell` you can use the following command.
+
+```PowerShell
+docker run --rm -it `
+  -v ${PWD}/input:/mnt/input:ro `
+  -v ${PWD}/output:/mnt/output `
+  -v ${PWD}/cache:/root/.cache/whisper/ `
+  ghcr.io/jo-hoe/whisper-docker-cli:latest `
+  whisper /mnt/input/demo.mp3 --output_dir /mnt/output/ -f srt
+```
+
+Both commands will store the transcription in the `output` folder and cache any downloaded models in the `cache` folder.
+
 ## Start via Docker Compose
 
 ```bash
