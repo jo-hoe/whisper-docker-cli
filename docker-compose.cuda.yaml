@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  whisper:
+    # gpu enablement 
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
