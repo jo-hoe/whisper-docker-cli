@@ -1,4 +1,4 @@
-# Whisper Docker CLI
+# Whisper CLI in Docker
 
 [![Docker Build](https://github.com/jo-hoe/whisper-docker-cli/actions/workflows/docker-build-test.yml/badge.svg)](https://github.com/jo-hoe/whisper-docker-cli/actions?workflow=docker-build-test)
 
