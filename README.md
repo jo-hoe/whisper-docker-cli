@@ -6,7 +6,7 @@ This repository wraps [whisper](https://github.com/openai/whisper) in a docker c
 
 ## Stare via Docker
 
-In `bash` or run the following command to start the container to transcribe an audio file (e.g. `demo.mp3`) in the input folder.
+In `bash` or run the following command to start the container to transcribe an audio file (e.g. `demo.mp3`) in the `input` folder.
 
 ```bash
 docker run --rm -it \
