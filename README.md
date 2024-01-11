@@ -28,7 +28,7 @@ docker run --rm -it `
   whisper /mnt/input/demo.mp3 --output_dir /mnt/output/ -f srt
 ```
 
-Both commands will store the transcription in the `output` folder and cache any downloaded models in the `cache` folder.
+Both commands will store the transcription in a directory called `output` and cache any downloaded models in a directory called `cache` on the same level as the input folder.
 
 ## Start via Docker Compose
 
