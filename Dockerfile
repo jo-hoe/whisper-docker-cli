@@ -1,3 +1,6 @@
+# pinning to python 3.11 as
+# whisper is currently only
+# expected to run on python 3.9 - 3.11
 FROM python:3.11-slim
 
 WORKDIR /opt/app
