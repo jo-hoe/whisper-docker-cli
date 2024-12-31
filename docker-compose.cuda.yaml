@@ -1,5 +1,3 @@
-version: "3"
-
 services:
 
   whisper:
@@ -11,3 +9,4 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+ 
