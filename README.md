@@ -4,7 +4,7 @@
 
 This repository wraps [whisper](https://github.com/openai/whisper) in a docker container.
 
-## Stare via Docker
+## Start via Docker
 
 In `bash` or run the following command to start the container to transcribe an audio file (e.g. `demo.mp3`) in the `input` folder.
 
@@ -66,4 +66,24 @@ and on Windows:
 ```PowerShell
 $env:COMPOSE_FILE="docker-compose.yaml;docker-compose.cuda.yaml"
 docker compose up -d
+```
+
+## Handle Multiple Files
+
+In the docker container you can translate a batch of files via linux native commands.
+For instance use:
+
+```bash
+for i in /mnt/input/*.mp4; do whisper $i --output_dir /mnt/output/ -f srt; done
+```
+
+Or execute everything in one command:
+
+```bash
+docker run --rm -it \
+  -v $(pwd)/input:/mnt/input:ro \
+  -v $(pwd)/output:/mnt/output \
+  -v $(pwd)/cache:/root/.cache/whisper/ \
+  ghcr.io/jo-hoe/whisper-docker-cli:latest \
+  bash -c 'for i in /mnt/input/*.mp4; do whisper "$i" --output_dir /mnt/output/ -f srt; done'
 ```
